@@ -205,24 +205,55 @@
 
 		}
 
+		public function checkMail($mailm) {
+
+			$err_mail = 0;
+
+			if (!empty($mailm)) {
+
+				if (!filter_var($mailm, FILTER_VALIDATE_EMAIL) && preg_match('/@.+\./', $mailm))
+					$err_mail++;
+
+			} else {
+
+				$err_mail++;
+
+			}
+
+			return (empty($err_mail)) ? TRUE : FALSE;
+
+		}
+
 		public function analyze($text, $mailm='', $mittm='') {
 
 			//	Analyze content of message
 			$this->checkExtLink($text);
 
-			//	if lookup is enabled in the database, proceed to connect to the database and the new research
-			if (isset($this->in_db) && !empty($this->in_db) && ($this->in_db))
-				$this->checkDB($mailm, $mittm);
+			if (!empty($mailm)) {
 
-			//	if lookup is enabled in the file, proceed to open file and the new research
-			if (isset($this->in_file) && !empty($this->in_file) && ($this->in_file))
-				$this->checkFile($mailm, $mittm);
+				if ($this->checkMail($mailm)) {
 
-			if (!empty($this->point)) {
+					//	if lookup is enabled in the database, proceed to connect to the database and the new research
+					if (isset($this->in_db) && !empty($this->in_db) && ($this->in_db))
+						$this->checkDB($mailm, $mittm);
 
-				//	if the self-learning is enabled and the email is marked as spam, save into database or into file, the sender and e-mail address
-				if (isset($this->robot) && !empty($this->robot) && ($this->robot))
-					$this->saveSpam($mailm, $mittm);
+					//	if lookup is enabled in the file, proceed to open file and the new research
+					if (isset($this->in_file) && !empty($this->in_file) && ($this->in_file))
+						$this->checkFile($mailm, $mittm);
+
+					if (!empty($this->point)) {
+
+						//	if the self-learning is enabled and the email is marked as spam, save into database or into file, the sender and e-mail address
+						if (isset($this->robot) && !empty($this->robot) && ($this->robot))
+							$this->saveSpam($mailm, $mittm);
+
+					}
+
+				} else {
+
+					$this->point = 123;
+
+				}
 
 			}
 
