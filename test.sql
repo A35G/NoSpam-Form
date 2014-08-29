@@ -59,4 +59,11 @@ INSERT INTO `flt_data` (`id_spam`, `from_spam`, `mail_spam`) VALUES
 (51, 'Daniel', 'goodsam@gmail.com'),
 (52, 'Hunter', 'rikky@aol.com'),
 (53, 'rikky', 'lightsoul@gmail.com'),
-(54, 'Aidan', 'pitfighter@hotmail.com');
+(54, 'Aidan', 'pitfighter@hotmail.com'),
+(55, 'Peyton', 'coco888@msn.com'),
+(56, 'greenwood', 'coco888@msn.com'),
+(57, 'Lillian', 'deadman@gmail.com'),
+(58, 'Devin', 'razer22@yahoo.com'),
+(59, 'Elijah', 'razer22@yahoo.com'),
+(60, 'Charles', 'behappy@yahoo.com'),
+(61, 'Jaden', 'unlove@gmail.com');
