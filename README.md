@@ -58,7 +58,7 @@ Usage
 	echo $anlz->analyze();
 ```
 
-oppure
+*or*
 
 ```php
 	if (file_exists(dirname(__FILE__).'/lib/filterm.class.php'))
@@ -68,7 +68,7 @@ oppure
 	echo $anlz->remoteCheck();
 ```
 
-If there are no errors, the message is clean and can be forwarded to the recipient.
+The script will return the status of the checks performed on the data sent.
 
 ### Notice
 
