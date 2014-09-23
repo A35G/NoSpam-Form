@@ -20,10 +20,13 @@ Features
 	- [x] Self-learning by results of search;
 
 - **To complete**:
-	- [	] Save URL contained within the text sent via form;
+	- [ ] Save URL contained within the text sent via form;
 	- [ ] Save IP address of sender;
 	- [ ] Save the date, type of e-mail sent and other useful information for analysis and statistics;
 	- [ ] Range of tolerance customizable on the score of the controls (currently, it is only 0 or 1);
+
+- **To be evaluated**:
+	- [ ] Consultation and integration of existing blacklist;
 
 Disclaimer
 ===============
