@@ -48,7 +48,9 @@
 		"drugs",
 		"Visa",
 		"pay",
-		" mg "
+		" mg ",
+		"xanax",
+		"prozac"
 	);
 
 	define('lstw', json_encode($dspam));
