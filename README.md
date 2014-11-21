@@ -27,6 +27,7 @@ Features
 
 - **To be evaluated**:
 	- [ ] Consultation and integration of existing blacklist;
+	- [ ] Block _**disposable**_ or _**temporary email**_, using the list of services or domains
 
 Disclaimer
 ===============
